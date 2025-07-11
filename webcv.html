@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Webpage</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #222;
+            overflow: hidden;
+        }
+        .columns-bg {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            display: flex;
+            z-index: 1;
+        }
+        .column {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: filter 0.2s;
+            cursor: pointer;
+            opacity: 0.92;
+        }
+        .column:hover {
+            filter: brightness(1.15) saturate(1.2);
+            opacity: 1;
+        }
+        .icon-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        .icon-link img {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 10px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+            background: white;
+            padding: 8px;
+        }
+        .icon-label {
+            font-size: 1.1em;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px #0008;
+        }
+        /* Column colors */
+        .col-gmail { background: linear-gradient(135deg, #ea4335 60%, #fbbc05 100%); }
+        .col-github { background: linear-gradient(135deg, #24292e 60%, #586069 100%); }
+        .col-youtube { background: linear-gradient(135deg, #ff0000 60%, #ff9900 100%); }
+        .col-resume { background: linear-gradient(135deg, #4a90e2 60%, #50e3c2 100%); }
+        /* Main image styling */
+        .main-image-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+            border-radius: 24px;
+            overflow: hidden;
+            background: #fff;
+            padding: 0;
+        }
+        .main-image-container img {
+            display: block;
+            width: 340px;
+            height: auto;
+            border-radius: 24px;
+        }
+        @media (max-width: 700px) {
+            .main-image-container img {
+                width: 90vw;
+            }
+            .icon-link img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="columns-bg">
+        <div class="column col-gmail">
+            <a class="icon-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=rbregrads25@gmail.com" target="_blank" title="Email Me">
+                <img src="gmail.png" alt="Gmail">
+                <span class="icon-label">Gmail</span>
+            </a>
+        </div>
+        <div class="column col-github">
+            <a class="icon-link" href="https://github.com/Rigam-huh" target="_blank" title="GitHub">
+                <img src="GitHub.png" alt="GitHub">
+                <span class="icon-label">GitHub</span>
+            </a>
+        </div>
+        <div class="column col-youtube">
+            <a class="icon-link" href="https://www.youtube.com/@CROW-presi" target="_blank" title="YouTube">
+                <img src="youtube.png" alt="YouTube">
+                <span class="icon-label">YouTube</span>
+            </a>
+        </div>
+        <div class="column col-resume">
+            <a class="icon-link" href="Rigam_Bhaduri_CV.pdf" target="_blank" title="Resume">
+                <img src="pdf.png" alt="Resume">
+                <span class="icon-label">Resume</span>
+            </a>
+        </div>
+    </div>
+    <div class="main-image-container">
+        <img src="rigam.jpg" alt="Main Picture">
+    </div>
+    <!-- Public access link -->
+    <div style="position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 3;">
+        <a href="https://allaboutrigam.com" target="_blank" style="background: #4a90e2; color: white; padding: 12px 28px; border-radius: 8px; font-size: 1.15em; font-weight: bold; text-decoration: none; box-shadow: 0 2px 8px #0005; transition: background 0.2s;">
+            🌐 Access this website from any device
+        </a>
+    </div>
+</body>
+</html> 
