@@ -3,131 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Webpage</title>
+    <title>Rigam Bhaduri</title>
+
     <style>
         body {
             margin: 0;
             padding: 0;
             min-height: 100vh;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #222;
+            background: #1e1e1e;
             overflow: hidden;
         }
-        .columns-bg {
+
+        /* ================= TOP NAVBAR ================= */
+        .top-navbar {
             position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            width: 100%;
+            height: 56px;
+            background: #0f172a;
             display: flex;
-            z-index: 1;
-        }
-        .column {
-            flex: 1;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            transition: filter 0.2s;
-            cursor: pointer;
-            opacity: 0.92;
-        }
-        .column:hover {
-            filter: brightness(1.15) saturate(1.2);
-            opacity: 1;
-        }
-        .icon-link {
-            display: flex;
-            flex-direction: column;
             align-items: center;
+            z-index: 1000;
+        }
+
+        .top-navbar a {
+            color: #e5e7eb;
             text-decoration: none;
-            color: white;
+            margin: 0 18px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
         }
-        .icon-link img {
-            width: 64px;
-            height: 64px;
-            margin-bottom: 10px;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.2);
-            background: white;
-            padding: 8px;
+
+        .top-navbar a:hover {
+            color: #38bdf8;
         }
-        .icon-label {
-            font-size: 1.1em;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-shadow: 0 2px 8px #0008;
-        }
-        /* Column colors */
-        .col-gmail { background: linear-gradient(135deg, #ea4335 60%, #fbbc05 100%); }
-        .col-github { background: linear-gradient(135deg, #24292e 60%, #586069 100%); }
-        .col-youtube { background: linear-gradient(135deg, #ff0000 60%, #ff9900 100%); }
-        .col-resume { background: linear-gradient(135deg, #4a90e2 60%, #50e3c2 100%); }
-        /* Main image styling */
+
+        /* ================= MAIN IMAGE ================= */
         .main-image-container {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -45%);
             z-index: 2;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
             border-radius: 24px;
             overflow: hidden;
-            background: #fff;
-            padding: 0;
+            background: #ffffff;
+            box-shadow: 0 12px 36px rgba(0,0,0,0.45);
         }
+
         .main-image-container img {
             display: block;
             width: 340px;
             height: auto;
-            border-radius: 24px;
         }
+
+        /* ================= IMAGE NAVBAR ================= */
+        .image-navbar {
+            background: #ffffff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 6px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .image-navbar a {
+            text-decoration: none;
+            color: #111827;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        .image-navbar img {
+            width: 28px;
+            height: 28px;
+            display: block;
+            margin: 0 auto 4px;
+        }
+
+        .image-navbar a:hover {
+            color: #2563eb;
+        }
+
+        /* ================= RESPONSIVE ================= */
         @media (max-width: 700px) {
             .main-image-container img {
-                width: 90vw;
+                width: 85vw;
             }
-            .icon-link img {
-                width: 40px;
-                height: 40px;
+
+            .image-navbar img {
+                width: 22px;
+                height: 22px;
             }
-        }
-       .columns-bg a.column {
-            display: flex;
-            flex: 1;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: inherit;
-            height: 100%;
         }
     </style>
 </head>
+
 <body>
-    <div class="columns-bg">
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rbregrads25@gmail.com" class="column col-gmail" target="_blank" title="Email Me">
-            <div class="icon-link">
-                <img src="gmail.png" alt="Gmail">
-                <span class="icon-label">Gmail</span>
-            </div>
+
+<!-- ========== TOP NAVIGATION (SEPARATE PAGES) ========== -->
+<div class="top-navbar">
+    <a href="index.html">Home</a>
+    <a href="webcv.html">CV</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="creative.html">Creative</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<!-- ========== CENTRAL IMAGE + WHITE NAVBAR ========== -->
+<div class="main-image-container">
+    <img src="rigam.jpg" alt="Rigam Bhaduri">
+
+    <div class="image-navbar">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rbregrads25@gmail.com" target="_blank">
+            <img src="gmail.png" alt="Gmail">
+            Gmail
         </a>
-        <a href="https://github.com/Rigam-huh" class="column col-github" target="_blank" title="GitHub">
-            <div class="icon-link">
-                <img src="GitHub.png" alt="GitHub">
-                <span class="icon-label">GitHub</span>
-            </div>
+
+        <a href="Rigam_Bhaduri_CV.pdf" target="_blank">
+            <img src="pdf.png" alt="Resume">
+            Resume
         </a>
-        <a href="https://www.youtube.com/@CROW-presi" class="column col-youtube" target="_blank" title="YouTube">
-            <div class="icon-link">
-                <img src="youtube.png" alt="YouTube">
-                <span class="icon-label">YouTube</span>
-            </div>
+
+        <a href="https://www.youtube.com/@CROW-presi" target="_blank">
+            <img src="youtube.png" alt="YouTube">
+            YouTube
         </a>
-        <a href="Rigam_Bhaduri_CV.pdf" class="column col-resume" target="_blank" title="Resume">
-            <div class="icon-link">
-                <img src="pdf.png" alt="Resume">
-                <span class="icon-label">Resume</span>
-            </div>
+
+        <a href="https://github.com/Rigam-huh" target="_blank">
+            <img src="GitHub.png" alt="GitHub">
+            GitHub
         </a>
     </div>
-    <div class="main-image-container">
-        <img src="rigam.jpg" alt="Main Picture">
-    </div>
+</div>
+
 </body>
-</html>  
-   
+</html>
